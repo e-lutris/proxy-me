@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Review pipeline: inventory the project, fan out to subagents by area, verify each finding and drop what cannot be confirmed, then rank">
+  <style>
+    :root { --bg:#ffffff; --card:#ffffff; --soft:#f5f8fb; --line:#e2e8f0; --ink:#334155; --muted:#64748b; --blue:#3073f0; --blue-soft:#e8f0fe; --bad:#b91c1c; --bad-soft:#fdecec; --warn:#b45309; --warn-soft:#fdf3e2; --good:#047857; --good-soft:#e6f6ef; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0d1117; --card:#07111f; --soft:#0b1625; --line:#18263a; --ink:#f8fafc; --muted:#9aa9bd; --blue:#6b9cff; --blue-soft:#10233f; --bad:#fca5a5; --bad-soft:#2a1416; --warn:#fcd34d; --warn-soft:#2a2212; --good:#6ee7b7; --good-soft:#0f2a22; }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+    .bg { fill: var(--bg); }
+    .card { fill: var(--card); stroke: var(--line); stroke-width: 1; }
+    .soft { fill: var(--soft); stroke: var(--line); stroke-width: 1; }
+    .h { font-size: 15px; font-weight: 700; }
+    .sub { font-size: 12px; fill: var(--muted); }
+    .t { font-size: 13px; }
+    .tm { font-size: 12px; fill: var(--muted); }
+    .bubble { fill: var(--blue-soft); }
+    .count { font-size: 12px; font-weight: 700; fill: var(--blue); }
+    .num { font-size: 12px; font-weight: 700; fill: var(--blue); }
+    .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+    .ahead { fill: var(--muted); }
+    .lbl { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: .04em; }
+    .bad { fill: var(--bad-soft); } .badt { fill: var(--bad); font-size: 11px; font-weight: 700; }
+    .warn { fill: var(--warn-soft); } .warnt { fill: var(--warn); font-size: 11px; font-weight: 700; }
+    .good { fill: var(--good-soft); } .goodt { fill: var(--good); font-size: 11px; font-weight: 700; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; fill: var(--muted); }
+      .pill { font-size: 11px; font-weight: 700; }
+    .dash { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .strike { stroke: var(--muted); stroke-width: 1.2; }
+    .faint { opacity: .45; }
+    .big { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .gray { fill: var(--soft); }
+  </style>
+  <rect class="bg" width="1200" height="460" rx="16"/>
+  <rect class="card" x="24" y="32" width="250" height="396" rx="16"/>
+  <text class="h" x="44" y="64">1  Inventory</text>
+  <text class="sub" x="44" y="84">What there is to check</text>
+  <rect class="soft" x="44" y="108" width="210" height="40" rx="10"/><text class="t" x="58" y="133">Project rules (CLAUDE.md…)</text>
+  <rect class="soft" x="44" y="160" width="210" height="40" rx="10"/><text class="t" x="58" y="185">Screens and routes</text>
+  <rect class="soft" x="44" y="212" width="210" height="40" rx="10"/><text class="t" x="58" y="237">Recent commits</text>
+  <rect class="soft" x="44" y="264" width="210" height="40" rx="10"/><text class="t" x="58" y="289">TODOs and open threads</text>
+  <rect class="soft" x="44" y="316" width="210" height="40" rx="10"/><text class="t" x="58" y="341">Screenshots</text>
+  <path class="arrow" d="M282 230 H304"/><path class="ahead" d="M304 224 L312 230 L304 236 Z"/>
+  <rect class="card" x="320" y="32" width="260" height="396" rx="16"/>
+  <text class="h" x="340" y="64">2  Fan out</text>
+  <text class="sub" x="340" y="84">One subagent per area</text>
+  <rect class="soft" x="340" y="108" width="220" height="52" rx="10"/><text class="t" x="354" y="130" font-weight="700">Onboarding &amp; sign-in</text><text class="tm" x="354" y="148">reads every lens</text>
+  <rect class="soft" x="340" y="172" width="220" height="52" rx="10"/><text class="t" x="354" y="194" font-weight="700">Core flow</text><text class="tm" x="354" y="212">reads every lens</text>
+  <rect class="soft" x="340" y="236" width="220" height="52" rx="10"/><text class="t" x="354" y="258" font-weight="700">Settings &amp; billing</text><text class="tm" x="354" y="276">reads every lens</text>
+  <rect class="soft" x="340" y="300" width="220" height="52" rx="10"/><text class="t" x="354" y="322" font-weight="700">Consistency sweep</text><text class="tm" x="354" y="340">reads every lens</text>
+  <path class="arrow" d="M588 230 H610"/><path class="ahead" d="M610 224 L618 230 L610 236 Z"/>
+  <rect class="card" x="626" y="32" width="270" height="396" rx="16"/>
+  <text class="h" x="646" y="64">3  Verify</text>
+  <text class="sub" x="646" y="84">Open the file, look at the screen</text>
+  <text class="tm" x="646" y="122">CANDIDATES</text><text class="big" x="646" y="152">23</text>
+  <text class="tm" x="766" y="122">CONFIRMED</text><text class="big" x="766" y="152" style="fill:var(--good)">11</text>
+  <rect class="good" x="646" y="180" width="48" height="20" rx="6"/><text class="goodt pill" x="670" y="194" text-anchor="middle">KEEP</text><text class="t" x="704" y="195">Header shifts after sign-in</text>
+  <rect class="good" x="646" y="218" width="48" height="20" rx="6"/><text class="goodt pill" x="670" y="232" text-anchor="middle">KEEP</text><text class="t" x="704" y="233">Old close button on 2 sheets</text>
+  <g class="faint"><rect class="gray" x="646" y="256" width="48" height="20" rx="6"/><text class="tm pill" x="670" y="270" text-anchor="middle">DROP</text><text class="t" x="704" y="271">Already fixed on this branch</text></g>
+  <g class="faint"><rect class="gray" x="646" y="294" width="48" height="20" rx="6"/><text class="tm pill" x="670" y="308" text-anchor="middle">DROP</text><text class="t" x="704" y="309">Intentional, per the rules</text></g>
+  <rect class="good" x="646" y="332" width="48" height="20" rx="6"/><text class="goodt pill" x="670" y="346" text-anchor="middle">KEEP</text><text class="t" x="704" y="347">“7 days free” after trial</text>
+  <g class="faint"><rect class="gray" x="646" y="370" width="48" height="20" rx="6"/><text class="tm pill" x="670" y="384" text-anchor="middle">DROP</text><text class="t" x="704" y="385">Not reproducible</text></g>
+  <path class="arrow" d="M904 230 H926"/><path class="ahead" d="M926 224 L934 230 L926 236 Z"/>
+  <rect class="card" x="942" y="32" width="234" height="396" rx="16"/>
+  <text class="h" x="962" y="64">4  Rank</text>
+  <text class="sub" x="962" y="84">Heaviest first</text>
+  <rect class="bad" x="962" y="112" width="44" height="20" rx="6"/><text class="badt pill" x="984" y="126" text-anchor="middle">HIGH</text><text class="t" x="1016" y="127">Breaks a written rule</text>
+  <rect class="bad" x="962" y="156" width="44" height="20" rx="6"/><text class="badt pill" x="984" y="170" text-anchor="middle">HIGH</text><text class="t" x="1016" y="171">A lens you repeat often</text>
+  <rect class="warn" x="962" y="200" width="44" height="20" rx="6"/><text class="warnt pill" x="984" y="214" text-anchor="middle">MED</text><text class="t" x="1016" y="215">On the main path</text>
+  <rect class="warn" x="962" y="244" width="44" height="20" rx="6"/><text class="warnt pill" x="984" y="258" text-anchor="middle">MED</text><text class="t" x="1016" y="259">Release risk</text>
+  <rect class="gray" x="962" y="288" width="44" height="20" rx="6"/><text class="tm pill" x="984" y="302" text-anchor="middle">TIE</text><text class="t" x="1016" y="303">Cheap fix breaks ties</text>
+  <text class="tm" x="962" y="352">→ review-YYYY-MM-DD.md</text>
+  <text class="tm" x="962" y="372">plus a short summary in chat</text>
+</svg>

@@ -44,19 +44,19 @@ or just ask: *"review this the way I would before release"*, *"what would I poin
 
 ### What happens
 
-1. **Extract** — `scripts/extract.py` streams `~/.claude/projects/**/*.jsonl` (and optionally `~/.codex/sessions`) and keeps only what *you* typed. Tool output, system reminders, task notifications, messages from other sessions/subagents, compaction summaries and one-word "ok"s are dropped. Multi-GB histories take seconds.
-2. **Learn** — the agent reads your messages (fanning out to subagents if there are many) and writes `lenses.md`: 8–15 lenses with quotes, how you make decisions, standing rules you've repeated, the phrases you use when you're unhappy, and open threads you never closed.
-3. **Review** — it inventories the project (rules docs, screens, recent commits, TODOs, screenshots), splits the work across subagents, **verifies every finding against the actual file or screen**, and ranks them.
-4. **Report** — `review-YYYY-MM-DD.md` with two lists, heaviest first, plus a short summary in chat.
+**1. Extract.** `scripts/extract.py` streams `~/.claude/projects/**/*.jsonl` (and optionally `~/.codex/sessions`) and keeps only what *you* typed. Tool output, system reminders, task notifications, messages from other sessions or subagents, compaction summaries and one-word acks are dropped. Multi-GB histories take seconds, and nothing leaves your machine.
 
-An example lens (fictional):
+![Transcripts are filtered on your machine down to only the messages you typed](assets/extract.svg)
 
-```markdown
-### 2. Nothing jumps while loading
-- Rule: no layout shift, flicker or late-appearing text on first paint or on back-navigation.
-- Look for: async content without a placeholder; images without size; text that swaps after hydration.
-- Quotes: "the header jumps every time I come back" (03-20) · "it flashes the default avatar first" (05-01)
-```
+**2. Learn.** The agent reads your messages (fanning out to subagents when there are many) and writes `lenses.md`: 8–15 lenses, each with a rule, what to look for and your own words as evidence, plus how you make decisions, rules you keep repeating, the phrases you use when something's off, and threads you never closed.
+
+![An example lenses.md](assets/lenses.svg)
+
+**3. Review.** It takes stock of the project (rules docs, screens, recent commits, TODOs, screenshots), splits the work across subagents by area, checks every finding against the actual file or screen, drops what it can't confirm, and ranks the rest.
+
+![Review pipeline: inventory, fan out, verify, rank](assets/review.svg)
+
+**4. Report.** `review-YYYY-MM-DD.md` with two lists, heaviest first (what you'd stop, and what you'd want done next), plus a short summary in chat.
 
 ### Extractor options
 
