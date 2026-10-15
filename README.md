@@ -1,8 +1,16 @@
 # style-mirror
 
-**Your agent learns what you keep pointing out — then says it before you do.**
+**Turn yourself into a function your agent can call.**
 
-You've corrected your coding agent hundreds of times: *"it jumps when it loads"*, *"you fixed it here but not there"*, *"this copy is wrong for paying users"*. Those corrections are sitting in your local transcripts. `style-mirror` is an [Agent Skill](https://agentskills.io) that reads them, distills them into a handful of **lenses** (your recurring review criteria, with your own quotes), and then reviews the current project through those lenses — producing a ranked list of **what to fix before you'd have to say it** and **what to do next**.
+```
+you(what the AI did, or is about to do)  →  go / stop, and why
+```
+
+Every time you look at your agent's work, you run this function in your head. Its inputs are a diff, a screen, a plan. Its output is a call — *ship it*, *stop, that's wrong*, *not yet, first do this* — made from your experience, your instinct, and your こだわり: the small things you refuse to let slide.
+
+You've been calling that function for months, and every call left a trace: *"it jumps when it loads"*, *"you fixed it here but not there"*, *"this copy is wrong for paying users"*. Those are in your local transcripts.
+
+`style-mirror` is an [Agent Skill](https://agentskills.io) that learns the function from them — as a set of **lenses** (your criteria, in your own words), how you decide, and what you left open — and then runs it on the current project before you do. Out comes a ranked list: **what you would stop** (fix it before you have to say it) and **where you would push next**.
 
 [日本語は下にあります ↓](#日本語)
 
@@ -98,9 +106,17 @@ MIT
 
 ## 日本語
 
-**あなたがいつも言っていることを覚えて、言われる前に直すための skill。**
+**あなたを、AI が呼べる「関数」にする skill。**
 
-コーディングエージェントに何度も同じ指摘をしていませんか？「読み込みでガタつく」「ここは直ったけどあっちが古いまま」「課金した人にこの文言はおかしい」。そうした指摘は手元の会話ログに残っています。`style-mirror` はそれを読んで、あなたの「観点（レンズ）」を本人の言葉の引用つきでまとめ、その観点で今のプロジェクトを見直します。出てくるのは、重さ順の **「言われる前に直すこと」** と **「次にやること」** です。
+```
+あなた(AI がやったこと・やろうとしていること)  →  進める / 止める と、その理由
+```
+
+AI の仕事を見るたびに、頭の中でこの関数が動いています。入力は差分・画面・計画。出力は「これでいい」「止めて、ちがう」「まだ。先にこれ」という判断。その判断のもとは、これまでの経験と、直感と、こだわりです。
+
+その関数はもう何百回も呼ばれていて、呼ばれた跡が手元の会話ログに残っています。「読み込みでガタつく」「ここは直ったけどあっちが古いまま」「課金した人にこの文言はおかしい」。
+
+`style-mirror` は、その跡から関数を学びます。あなたの物差し（観点を本人の言葉の引用つきで）、決め方のくせ、やりかけのこと。それを今のプロジェクトにあなたより先に当てて、重さ順に出します。**あなたなら止めるところ**（言われる前に直すこと）と、**あなたなら次に進めるところ**（次にやること）です。
 
 ### 入れ方
 

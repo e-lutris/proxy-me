@@ -1,6 +1,6 @@
 ---
 name: style-mirror
-description: Learns what this user keeps pointing out from their own past coding-agent conversations (Claude Code / Codex transcripts on this machine), turns it into "lenses", then reviews the current project through those lenses to list what to fix before they say it and what to do next, ranked by weight. Use when the user asks for a pre-release review "in my style", "what would I point out", "what did I forget", "what should we do next", or says 言われる前に直して / 僕が指摘しそうなこと / 次にやること / リリース前の見直し / 観点を振り返って.
+description: Models the user as a function — input what the AI did or is about to do, output go / stop and why — learned from their own past coding-agent conversations (Claude Code / Codex transcripts on this machine) as "lenses" (experience, instinct, こだわり). Then reviews the current project through those lenses to list what to fix before they say it and what to do next, ranked by weight. Use when the user asks for a pre-release review "in my style", "what would I point out", "what did I forget", "what should we do next", or says 言われる前に直して / 僕が指摘しそうなこと / 次にやること / リリース前の見直し / 観点を振り返って.
 license: MIT
 metadata:
   version: "0.1.0"
@@ -8,7 +8,7 @@ metadata:
 
 # style-mirror
 
-Read the user's own history, learn what they care about, then look at the project the way they would — and say it first.
+Treat the user as a function: `user(what the AI did or is about to do) → go / stop, and why`. Their experience, instinct and こだわり (the details they refuse to let slide) are the function body; their past corrections in the transcripts are its recorded calls. Learn the function from those calls, then run it on the project before they do — and say it first.
 
 Two phases. Run both unless the user asked for only one (`learn` = phase 1 only, `review` = phase 2 with the existing lenses).
 
