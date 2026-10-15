@@ -4,6 +4,8 @@ Most of the time, your agent waits for you: to review, to catch what's off, to s
 
 It reads your local Claude Code or Codex history, learns the judgment behind your feedback, and turns it into something your agent can run on its own. Before you look, it has already gone through the project the way you would, flagged what you'd flag, and lined up what you'd want done next.
 
+![proxy-me learns from the feedback you keep repeating, turns it into lenses, and reviews your project before you ask](assets/overview.svg)
+
 ## Install
 
 ```bash
