@@ -1,0 +1,12 @@
+{
+  "name": "style-mirror",
+  "description": "style-mirror: review your project the way you would, learned from your own agent history.",
+  "owner": { "name": "Masaki Kitsugi", "url": "https://github.com/mkitsugi" },
+  "plugins": [
+    {
+      "name": "style-mirror",
+      "source": "./",
+      "description": "Learn your recurring review lenses from local Claude Code / Codex transcripts and apply them to the current project."
+    }
+  ]
+}
