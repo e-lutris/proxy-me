@@ -2,9 +2,9 @@
   "name": "proxy-me",
   "version": "0.1.0",
   "description": "Your judgment as a skill: learns how you review from your Claude Code / Codex history, then goes through the project as you would before you ask.",
-  "author": { "name": "Masaki Kitsugi", "url": "https://github.com/mkitsugi" },
-  "homepage": "https://github.com/mkitsugi/proxy-me",
-  "repository": "https://github.com/mkitsugi/proxy-me",
+  "author": { "name": "e-lutris", "url": "https://github.com/e-lutris" },
+  "homepage": "https://github.com/e-lutris/proxy-me",
+  "repository": "https://github.com/e-lutris/proxy-me",
   "license": "MIT",
   "keywords": ["review", "code-review", "ux", "release", "personalization", "skills"]
 }

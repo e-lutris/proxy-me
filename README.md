@@ -7,19 +7,19 @@ It reads your local Claude Code or Codex history, learns the judgment behind you
 ## Install
 
 ```bash
-npx skills add mkitsugi/proxy-me
+npx skills add e-lutris/proxy-me
 ```
 
 The [`skills` CLI](https://github.com/vercel-labs/skills) asks which agents to install into (Claude Code, Codex, Cursor, …) and whether to install for this project or globally. To install globally for Claude Code without prompts:
 
 ```bash
-npx skills add mkitsugi/proxy-me -g -a claude-code -y
+npx skills add e-lutris/proxy-me -g -a claude-code -y
 ```
 
 Or as a Claude Code plugin:
 
 ```text
-/plugin marketplace add mkitsugi/proxy-me
+/plugin marketplace add e-lutris/proxy-me
 /plugin install proxy-me@proxy-me
 ```
 

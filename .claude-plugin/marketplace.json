@@ -1,7 +1,7 @@
 {
   "name": "proxy-me",
   "description": "proxy-me: your review judgment, learned from your own agent history.",
-  "owner": { "name": "Masaki Kitsugi", "url": "https://github.com/mkitsugi" },
+  "owner": { "name": "e-lutris", "url": "https://github.com/e-lutris" },
   "plugins": [
     {
       "name": "proxy-me",
