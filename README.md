@@ -1,35 +1,29 @@
-# style-mirror
+# proxy-me
 
-**Teach your agent to judge its work the way you would.**
+Most of the time, your agent waits for you: to review, to catch what's off, to say what's next. proxy-me is a skill that does that part as you.
 
-```
-judge(what the agent did, or is about to do)  →  go / stop, and why
-```
-
-When you review an agent's work, you're running a judgment you never wrote down. It comes from experience, from instinct, and from the details you care about more than anyone else on the project. You've been exercising it for months, and every correction you typed left a trace in your local transcripts: *"it jumps when it loads"*, *"you fixed it here but not there"*, *"this copy is wrong for paying users"*.
-
-`style-mirror` is an [Agent Skill](https://agentskills.io) that learns that judgment from those traces: your recurring criteria (**lenses**, each backed by your own quotes), how you make decisions, and the threads you left open. Then it applies it to the current project before you look, and hands you a ranked list of **what you would stop** and **what you would push next**.
+It reads your local Claude Code or Codex history, learns the judgment behind your feedback, and turns it into something your agent can run on its own. Before you look, it has already gone through the project the way you would, flagged what you'd flag, and lined up what you'd want done next.
 
 ## Install
 
 ```bash
-npx skills add mkitsugi/style-mirror
+npx skills add mkitsugi/proxy-me
 ```
 
 The [`skills` CLI](https://github.com/vercel-labs/skills) asks which agents to install into (Claude Code, Codex, Cursor, …) and whether to install for this project or globally. To install globally for Claude Code without prompts:
 
 ```bash
-npx skills add mkitsugi/style-mirror -g -a claude-code -y
+npx skills add mkitsugi/proxy-me -g -a claude-code -y
 ```
 
 Or as a Claude Code plugin:
 
 ```text
-/plugin marketplace add mkitsugi/style-mirror
-/plugin install style-mirror@style-mirror
+/plugin marketplace add mkitsugi/proxy-me
+/plugin install proxy-me@proxy-me
 ```
 
-Installed as a plugin, the command is `/style-mirror:style-mirror`. Use one method, not both, or you'll have two copies of the same skill.
+Installed as a plugin, the command is `/proxy-me:proxy-me`. Use one method, not both, or you'll have two copies of the same skill.
 
 Requires Python 3 (standard library only) to read the transcripts.
 
@@ -38,13 +32,13 @@ Requires Python 3 (standard library only) to read the transcripts.
 In Claude Code, inside your project:
 
 ```text
-/style-mirror
+/proxy-me
 ```
 
 or just ask: *"review this the way I would before release"*, *"what would I point out here?"*, *"what did I forget to do?"*
 
-- `/style-mirror learn` — only build/update your lenses.
-- `/style-mirror review` — only review, using the lenses you already have.
+- `/proxy-me learn` — only build/update your lenses.
+- `/proxy-me review` — only review, using the lenses you already have.
 
 ### What happens
 
@@ -65,7 +59,7 @@ An example lens (fictional):
 ### Extractor options
 
 ```bash
-python3 skills/style-mirror/scripts/extract.py --help
+python3 skills/proxy-me/scripts/extract.py --help
 ```
 
 | Option | Meaning |
@@ -75,16 +69,16 @@ python3 skills/style-mirror/scripts/extract.py --help
 | `--all` | every project (your personal habits) |
 | `--since 90d` | only recent messages (`30d`, `12w`, `6m` or a date) |
 | `--source codex` / `both` | read Codex CLI history (interactive sessions only) |
-| `--out <dir>` | output folder (default `~/.claude/style-mirror/<project>/`) |
+| `--out <dir>` | output folder (default `~/.claude/proxy-me/<project>/`) |
 
 ## Privacy
 
-Everything stays on your machine. Messages, lenses and reports are written to `~/.claude/style-mirror/`, outside your repository, and the skill is instructed never to commit or share them. Nothing is sent anywhere except to the model you are already using.
+Everything stays on your machine. Messages, lenses and reports are written to `~/.claude/proxy-me/`, outside your repository, and the skill is instructed never to commit or share them. Nothing is sent anywhere except to the model you are already using.
 
 ## Layout
 
 ```
-skills/style-mirror/
+skills/proxy-me/
 ├── SKILL.md                      # the workflow
 ├── scripts/extract.py            # transcript → your messages
 └── references/

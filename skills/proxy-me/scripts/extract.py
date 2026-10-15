@@ -266,14 +266,14 @@ def main() -> int:
     ap.add_argument("--source", choices=["claude", "codex", "both"], default="claude")
     ap.add_argument("--since", help="only messages newer than this: 30d, 12w, 6m or YYYY-MM-DD")
     ap.add_argument("--max-chars", type=int, default=1200, help="truncate longer messages (default 1200)")
-    ap.add_argument("--out", help="output folder (default: ~/.claude/style-mirror/<project>)")
+    ap.add_argument("--out", help="output folder (default: ~/.claude/proxy-me/<project>)")
     ap.add_argument("--chunk-chars", type=int, default=80000,
                     help="split messages.md into chunks of about this many characters (default 80000)")
     args = ap.parse_args()
 
     since = parse_since(args.since)
     label = "all-projects" if args.all else (os.path.basename(os.path.realpath(args.project)) or "root")
-    out = os.path.expanduser(args.out or os.path.join(CLAUDE_DIR, "style-mirror", label))
+    out = os.path.expanduser(args.out or os.path.join(CLAUDE_DIR, "proxy-me", label))
     os.makedirs(out, exist_ok=True)
 
     streams = []

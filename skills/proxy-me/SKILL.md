@@ -1,14 +1,14 @@
 ---
-name: style-mirror
-description: Models the user as a function — input what the AI did or is about to do, output go / stop and why — learned from their own past coding-agent conversations (Claude Code / Codex transcripts on this machine) as "lenses" (experience, instinct, standards). Then reviews the current project through those lenses to list what to fix before they say it and what to do next, ranked by weight. Use when the user asks for a pre-release review "in my style", "what would I point out", "what did I forget", "what should we do next", or says 言われる前に直して / 僕が指摘しそうなこと / 次にやること / リリース前の見直し / 観点を振り返って.
+name: proxy-me
+description: Acts as the user's proxy reviewer. Learns how they judge an agent's work (go / stop and why) from their own past coding-agent conversations (Claude Code / Codex transcripts on this machine) as "lenses" (experience, instinct, standards). Then reviews the current project through those lenses to list what to fix before they say it and what to do next, ranked by weight. Use when the user asks for a pre-release review "in my style", "what would I point out", "what did I forget", "what should we do next", or says 言われる前に直して / 僕が指摘しそうなこと / 次にやること / リリース前の見直し / 観点を振り返って.
 license: MIT
 metadata:
   version: "0.1.0"
 ---
 
-# style-mirror
+# proxy-me
 
-Treat the user as a function: `user(what the AI did or is about to do) → go / stop, and why`. Their experience, instinct and standards (the details they refuse to let slide) are the function body; their past corrections in the transcripts are its recorded calls. Learn the function from those calls, then run it on the project before they do — and say it first.
+Act as the user's proxy: answer the questions they would ask before they ask them. Their judgment — what the AI did or is about to do in, go / stop and why out — is what you learn. Their experience, instinct and standards (the details they refuse to let slide) are the function body; their past corrections in the transcripts are its recorded calls. Learn the function from those calls, then run it on the project before they do — and say it first.
 
 Two phases. Run both unless the user asked for only one (`learn` = phase 1 only, `review` = phase 2 with the existing lenses).
 
@@ -19,7 +19,7 @@ Phase 2  review  lenses.md + code + screens + open threads ──subagents──
 
 ## Ground rules
 
-- **Everything stays local.** Messages, lenses and reports are written under `~/.claude/style-mirror/<project>/` (the extractor's output folder), not inside the repository. Never commit them, paste them into a PR, an issue, or any external service. If the user wants the report in the repo, ask first and leave quotes out.
+- **Everything stays local.** Messages, lenses and reports are written under `~/.claude/proxy-me/<project>/` (the extractor's output folder), not inside the repository. Never commit them, paste them into a PR, an issue, or any external service. If the user wants the report in the repo, ask first and leave quotes out.
 - **Speak the user's language.** `stats.json` → `share_with_cjk_text` shows the mix; match how the user writes to you now. Quote the user in their original words.
 - **Evidence or it didn't happen.** Every lens cites real quotes. Every finding cites a file:line, a screenshot, or a command output you actually saw.
 - **Report, don't fix.** This skill produces a ranked list. Fix things only if the user then asks.

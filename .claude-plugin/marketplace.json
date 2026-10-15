@@ -1,12 +1,12 @@
 {
-  "name": "style-mirror",
-  "description": "style-mirror: your go/stop judgment, learned from your own agent history.",
+  "name": "proxy-me",
+  "description": "proxy-me: your review judgment, learned from your own agent history.",
   "owner": { "name": "Masaki Kitsugi", "url": "https://github.com/mkitsugi" },
   "plugins": [
     {
-      "name": "style-mirror",
+      "name": "proxy-me",
       "source": "./",
-      "description": "Learn your go/stop judgment (experience, instinct, standards) from local Claude Code / Codex transcripts and run it on the current project."
+      "description": "Learns how you review from local Claude Code / Codex transcripts and reviews the current project as you would, before you ask."
     }
   ]
 }

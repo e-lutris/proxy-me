@@ -1,10 +1,10 @@
 {
-  "name": "style-mirror",
+  "name": "proxy-me",
   "version": "0.1.0",
-  "description": "Turn yourself into a function your agent can call: learn your go/stop judgment from your own Claude Code / Codex history, then run it on your project before you have to.",
+  "description": "Your judgment as a skill: learns how you review from your Claude Code / Codex history, then goes through the project as you would before you ask.",
   "author": { "name": "Masaki Kitsugi", "url": "https://github.com/mkitsugi" },
-  "homepage": "https://github.com/mkitsugi/style-mirror",
-  "repository": "https://github.com/mkitsugi/style-mirror",
+  "homepage": "https://github.com/mkitsugi/proxy-me",
+  "repository": "https://github.com/mkitsugi/proxy-me",
   "license": "MIT",
   "keywords": ["review", "code-review", "ux", "release", "personalization", "skills"]
 }
