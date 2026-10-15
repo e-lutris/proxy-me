@@ -1,141 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="proxy-me: repeated feedback from your past sessions becomes lenses, which review your project before you ask">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 1220" width="480" height="1220" role="img" aria-label="proxy-me: repeated feedback from your past sessions becomes lenses, which review your project before you ask">
   <style>
     :root { --bg:#ffffff; --card:#ffffff; --soft:#f5f8fb; --line:#e2e8f0; --ink:#334155; --muted:#64748b; --blue:#3073f0; --blue-soft:#e8f0fe; --bad:#b91c1c; --bad-soft:#fdecec; --warn:#b45309; --warn-soft:#fdf3e2; --good:#047857; --good-soft:#e6f6ef; }
     @media (prefers-color-scheme: dark) {
       :root { --bg:#0d1117; --card:#07111f; --soft:#0b1625; --line:#18263a; --ink:#f8fafc; --muted:#9aa9bd; --blue:#6b9cff; --blue-soft:#10233f; --bad:#fca5a5; --bad-soft:#2a1416; --warn:#fcd34d; --warn-soft:#2a2212; --good:#6ee7b7; --good-soft:#0f2a22; }
     }
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
-    .bg { fill: var(--bg); }
-    .card { fill: var(--card); stroke: var(--line); stroke-width: 1; }
-    .soft { fill: var(--soft); stroke: var(--line); stroke-width: 1; }
-    .h { font-size: 15px; font-weight: 700; }
-    .sub { font-size: 12px; fill: var(--muted); }
-    .t { font-size: 13px; }
-    .tm { font-size: 12px; fill: var(--muted); }
-    .bubble { fill: var(--blue-soft); }
-    .count { font-size: 12px; font-weight: 700; fill: var(--blue); }
-    .num { font-size: 12px; font-weight: 700; fill: var(--blue); }
-    .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
-    .ahead { fill: var(--muted); }
-    .lbl { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: .04em; }
-    .bad { fill: var(--bad-soft); } .badt { fill: var(--bad); font-size: 11px; font-weight: 700; }
-    .warn { fill: var(--warn-soft); } .warnt { fill: var(--warn); font-size: 11px; font-weight: 700; }
-    .good { fill: var(--good-soft); } .goodt { fill: var(--good); font-size: 11px; font-weight: 700; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; fill: var(--muted); }
+    .bg { fill: var(--bg); } .card { fill: var(--card); stroke: var(--line); stroke-width: 1; } .soft { fill: var(--soft); stroke: var(--line); stroke-width: 1; }
+    .h { font-size: 17px; font-weight: 700; } .sub { font-size: 13px; fill: var(--muted); }
+    .t { font-size: 14px; } .b { font-weight: 700; } .tm { font-size: 13px; fill: var(--muted); }
+    .bubble { fill: var(--blue-soft); } .count { font-size: 13px; font-weight: 700; fill: var(--blue); }
+    .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; } .ahead { fill: var(--muted); }
+    .lbl { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: .05em; }
+    .bad { fill: var(--bad-soft); } .badt { fill: var(--bad); } .warn { fill: var(--warn-soft); } .warnt { fill: var(--warn); }
+    .good { fill: var(--good-soft); } .goodt { fill: var(--good); } .gray { fill: var(--soft); } .grayt { fill: var(--muted); }
+    .pill { font-size: 11px; font-weight: 700; } .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; fill: var(--muted); }
+    .dash { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; } .faint { opacity: .45; }
+    .big { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
   </style>
-
-  <rect class="bg" width="1200" height="560" rx="16"/>
-
-  <!-- 1. past sessions -->
-  <rect class="card" x="32" y="32" width="340" height="496" rx="16"/>
-  <text class="h" x="56" y="66">Your past sessions</text>
-  <text class="sub" x="56" y="86">What you keep telling your agent</text>
-
-  <g>
-    <rect class="bubble" x="76" y="112" width="272" height="52" rx="14"/>
-    <text class="t" x="92" y="143">“It jumps when the page loads.”</text>
-    <text class="count" x="56" y="143" text-anchor="start">×4</text>
-  </g>
-  <g>
-    <rect class="bubble" x="76" y="180" width="272" height="52" rx="14"/>
-    <text class="t" x="92" y="211">“Fixed here, but not over there.”</text>
-    <text class="count" x="56" y="211">×6</text>
-  </g>
-  <g>
-    <rect class="bubble" x="76" y="248" width="272" height="52" rx="14"/>
-    <text class="t" x="92" y="279">“Wrong copy for paying users.”</text>
-    <text class="count" x="56" y="279">×3</text>
-  </g>
-  <g>
-    <rect class="bubble" x="76" y="316" width="272" height="52" rx="14"/>
-    <text class="t" x="92" y="347">“Show me the screen first.”</text>
-    <text class="count" x="56" y="347">×5</text>
-  </g>
-  <g>
-    <rect class="bubble" x="76" y="384" width="272" height="52" rx="14"/>
-    <text class="t" x="92" y="415">“We said we’d do that later…”</text>
-    <text class="count" x="56" y="415">×2</text>
-  </g>
-  <text class="tm" x="56" y="490">Read from your local Claude Code / Codex</text>
-  <text class="tm" x="56" y="508">transcripts. Nothing leaves your machine.</text>
-
-  <!-- arrow 1 -->
-  <text class="lbl" x="404" y="268" text-anchor="middle">LEARN</text>
-  <path class="arrow" d="M384 280 H424"/>
-  <path class="ahead" d="M424 274 L434 280 L424 286 Z"/>
-
-  <!-- 2. lenses -->
-  <rect class="card" x="446" y="32" width="308" height="496" rx="16"/>
-  <text class="h" x="470" y="66">Your lenses</text>
-  <text class="sub" x="470" y="86">Your judgment, written down</text>
-
-  <g>
-    <rect class="soft" x="470" y="112" width="260" height="62" rx="12"/>
-    <text class="num" x="486" y="138">01</text><text class="t" x="512" y="138" font-weight="700">Fix it everywhere</text>
-    <text class="tm" x="512" y="158">same pattern, same pass</text>
-  </g>
-  <g>
-    <rect class="soft" x="470" y="186" width="260" height="62" rx="12"/>
-    <text class="num" x="486" y="212">02</text><text class="t" x="512" y="212" font-weight="700">Nothing jumps on load</text>
-    <text class="tm" x="512" y="232">no layout shift or flicker</text>
-  </g>
-  <g>
-    <rect class="soft" x="470" y="260" width="260" height="62" rx="12"/>
-    <text class="num" x="486" y="286">03</text><text class="t" x="512" y="286" font-weight="700">Copy matches the state</text>
-    <text class="tm" x="512" y="306">trial, plan, platform</text>
-  </g>
-  <g>
-    <rect class="soft" x="470" y="334" width="260" height="62" rx="12"/>
-    <text class="num" x="486" y="360">04</text><text class="t" x="512" y="360" font-weight="700">Decide from screens</text>
-    <text class="tm" x="512" y="380">how you choose</text>
-  </g>
-  <g>
-    <rect class="soft" x="470" y="408" width="260" height="62" rx="12"/>
-    <text class="num" x="486" y="434">05</text><text class="t" x="512" y="434" font-weight="700">Open threads</text>
-    <text class="tm" x="512" y="454">what you meant to come back to</text>
-  </g>
-  <text class="tm" x="470" y="508">Each lens is backed by your own quotes.</text>
-
-  <!-- arrow 2 -->
-  <text class="lbl" x="786" y="268" text-anchor="middle">REVIEW</text>
-  <path class="arrow" d="M766 280 H806"/>
-  <path class="ahead" d="M806 274 L816 280 L806 286 Z"/>
-
-  <!-- 3. report -->
-  <rect class="card" x="828" y="32" width="340" height="496" rx="16"/>
-  <text class="h" x="852" y="66">Before you ask</text>
-  <text class="sub" x="852" y="86">Your project, reviewed as you would</text>
-
-  <text class="lbl" x="852" y="124">FIX BEFORE YOU SAY IT</text>
-  <g>
-    <rect class="bad" x="852" y="136" width="44" height="20" rx="6"/><text class="badt" x="874" y="150" text-anchor="middle">HIGH</text>
-    <text class="t" x="906" y="151">Header shifts after sign-in</text>
-    <text class="mono" x="906" y="170">src/routes/profile.tsx:42 · lens 02</text>
-  </g>
-  <g>
-    <rect class="bad" x="852" y="190" width="44" height="20" rx="6"/><text class="badt" x="874" y="204" text-anchor="middle">HIGH</text>
-    <text class="t" x="906" y="205">Old close button on 2 of 5 sheets</text>
-    <text class="mono" x="906" y="224">components/Sheet.tsx:18 · lens 01</text>
-  </g>
-  <g>
-    <rect class="warn" x="852" y="244" width="44" height="20" rx="6"/><text class="warnt" x="874" y="258" text-anchor="middle">MED</text>
-    <text class="t" x="906" y="259">“7 days free” shown after trial</text>
-    <text class="mono" x="906" y="278">routes/paywall.tsx:88 · lens 03</text>
-  </g>
-
-  <line x1="852" y1="304" x2="1144" y2="304" stroke="var(--line)" stroke-width="1"/>
-
-  <text class="lbl" x="852" y="334">NEXT TO DO</text>
-  <g>
-    <rect class="good" x="852" y="346" width="44" height="20" rx="6"/><text class="goodt" x="874" y="360" text-anchor="middle">NEXT</text>
-    <text class="t" x="906" y="361">Account deletion flow</text>
-    <text class="tm" x="906" y="380">asked 3 weeks ago, still open</text>
-  </g>
-  <g>
-    <rect class="good" x="852" y="400" width="44" height="20" rx="6"/><text class="goodt" x="874" y="414" text-anchor="middle">NEXT</text>
-    <text class="t" x="906" y="415">Screenshots for the store</text>
-    <text class="tm" x="906" y="434">blocks the release</text>
-  </g>
-  <text class="tm" x="852" y="490">Every finding is checked against</text>
-  <text class="tm" x="852" y="508">the actual file or screen.</text>
+  <rect class="bg" width="480" height="1220" rx="16"/>
+  <rect class="card" x="20" y="20" width="440" height="292" rx="16"/>
+  <text class="h" x="40" y="52">Your past sessions</text>
+  <text class="sub" x="40" y="72">What you keep telling your agent</text>
+  <text class="count" x="40" y="118">×6</text><rect class="bubble" x="76" y="92" width="364" height="42" rx="13"/><text class="t" x="92" y="118">“Fixed here, but not over there.”</text>
+  <text class="count" x="40" y="170">×5</text><rect class="bubble" x="76" y="144" width="364" height="42" rx="13"/><text class="t" x="92" y="170">“Show me the screen first.”</text>
+  <text class="count" x="40" y="222">×4</text><rect class="bubble" x="76" y="196" width="364" height="42" rx="13"/><text class="t" x="92" y="222">“It jumps when the page loads.”</text>
+  <text class="count" x="40" y="274">×3</text><rect class="bubble" x="76" y="248" width="364" height="42" rx="13"/><text class="t" x="92" y="274">“Wrong copy for paying users.”</text>
+  <path class="arrow" d="M240.0 322 V354"/><path class="ahead" d="M234.0 352 L240.0 362 L246.0 352 Z"/>
+  <text class="lbl" x="254.0" y="346">LEARN</text>
+  <rect class="card" x="20" y="372" width="440" height="348" rx="16"/>
+  <text class="h" x="40" y="404">Your lenses</text>
+  <text class="sub" x="40" y="424">Your judgment, written down</text>
+  <rect class="soft" x="40" y="444" width="400" height="50" rx="12"/><text class="count" x="56" y="466">01</text><text class="t b" x="84" y="466">Fix it everywhere</text><text class="tm" x="84" y="484">same pattern, same pass</text>
+  <rect class="soft" x="40" y="504" width="400" height="50" rx="12"/><text class="count" x="56" y="526">02</text><text class="t b" x="84" y="526">Nothing jumps on load</text><text class="tm" x="84" y="544">no layout shift or flicker</text>
+  <rect class="soft" x="40" y="564" width="400" height="50" rx="12"/><text class="count" x="56" y="586">03</text><text class="t b" x="84" y="586">Copy matches the state</text><text class="tm" x="84" y="604">trial, plan, platform</text>
+  <rect class="soft" x="40" y="624" width="400" height="50" rx="12"/><text class="count" x="56" y="646">04</text><text class="t b" x="84" y="646">Decide from screens</text><text class="tm" x="84" y="664">how you choose</text>
+  <text class="tm" x="40" y="702">Each lens is backed by your own quotes.</text>
+  <path class="arrow" d="M240.0 730 V762"/><path class="ahead" d="M234.0 760 L240.0 770 L246.0 760 Z"/>
+  <text class="lbl" x="254.0" y="754">REVIEW</text>
+  <rect class="card" x="20" y="780" width="440" height="420" rx="16"/>
+  <text class="h" x="40" y="812">Before you ask</text>
+  <text class="sub" x="40" y="832">Your project, reviewed as you would</text>
+  <text class="lbl" x="40" y="864">FIX BEFORE YOU SAY IT</text>
+  <rect class="bad" x="40" y="878" width="44" height="20" rx="6"/><text class="badt pill" x="62" y="892" text-anchor="middle">HIGH</text><text class="t" x="96" y="893">Header shifts after sign-in</text><text class="mono" x="96" y="912">profile.tsx:42 · lens 02</text>
+  <rect class="bad" x="40" y="928" width="44" height="20" rx="6"/><text class="badt pill" x="62" y="942" text-anchor="middle">HIGH</text><text class="t" x="96" y="943">Old close button on 2 sheets</text><text class="mono" x="96" y="962">Sheet.tsx:18 · lens 01</text>
+  <rect class="warn" x="40" y="978" width="44" height="20" rx="6"/><text class="warnt pill" x="62" y="992" text-anchor="middle">MED</text><text class="t" x="96" y="993">“7 days free” shown after trial</text><text class="mono" x="96" y="1012">paywall.tsx:88 · lens 03</text>
+  <line x1="40" y1="1042" x2="440" y2="1042" stroke="var(--line)"/>
+  <text class="lbl" x="40" y="1072">NEXT TO DO</text>
+  <rect class="good" x="40" y="1086" width="44" height="20" rx="6"/><text class="goodt pill" x="62" y="1100" text-anchor="middle">NEXT</text><text class="t" x="96" y="1101">Account deletion flow</text><text class="tm" x="96" y="1120">asked 3 weeks ago, still open</text>
+  <rect class="good" x="40" y="1136" width="44" height="20" rx="6"/><text class="goodt pill" x="62" y="1150" text-anchor="middle">NEXT</text><text class="t" x="96" y="1151">Screenshots for the store</text><text class="tm" x="96" y="1170">blocks the release</text>
 </svg>

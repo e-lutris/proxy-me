@@ -1,57 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Transcripts are filtered on your machine down to only the messages you typed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 788" width="480" height="788" role="img" aria-label="Transcripts are filtered on your machine down to only the messages you typed">
   <style>
     :root { --bg:#ffffff; --card:#ffffff; --soft:#f5f8fb; --line:#e2e8f0; --ink:#334155; --muted:#64748b; --blue:#3073f0; --blue-soft:#e8f0fe; --bad:#b91c1c; --bad-soft:#fdecec; --warn:#b45309; --warn-soft:#fdf3e2; --good:#047857; --good-soft:#e6f6ef; }
     @media (prefers-color-scheme: dark) {
       :root { --bg:#0d1117; --card:#07111f; --soft:#0b1625; --line:#18263a; --ink:#f8fafc; --muted:#9aa9bd; --blue:#6b9cff; --blue-soft:#10233f; --bad:#fca5a5; --bad-soft:#2a1416; --warn:#fcd34d; --warn-soft:#2a2212; --good:#6ee7b7; --good-soft:#0f2a22; }
     }
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
-    .bg { fill: var(--bg); }
-    .card { fill: var(--card); stroke: var(--line); stroke-width: 1; }
-    .soft { fill: var(--soft); stroke: var(--line); stroke-width: 1; }
-    .h { font-size: 15px; font-weight: 700; }
-    .sub { font-size: 12px; fill: var(--muted); }
-    .t { font-size: 13px; }
-    .tm { font-size: 12px; fill: var(--muted); }
-    .bubble { fill: var(--blue-soft); }
-    .count { font-size: 12px; font-weight: 700; fill: var(--blue); }
-    .num { font-size: 12px; font-weight: 700; fill: var(--blue); }
-    .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
-    .ahead { fill: var(--muted); }
-    .lbl { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: .04em; }
-    .bad { fill: var(--bad-soft); } .badt { fill: var(--bad); font-size: 11px; font-weight: 700; }
-    .warn { fill: var(--warn-soft); } .warnt { fill: var(--warn); font-size: 11px; font-weight: 700; }
-    .good { fill: var(--good-soft); } .goodt { fill: var(--good); font-size: 11px; font-weight: 700; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; fill: var(--muted); }
-      .pill { font-size: 11px; font-weight: 700; }
-    .dash { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; }
-    .strike { stroke: var(--muted); stroke-width: 1.2; }
-    .faint { opacity: .45; }
-    .big { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
-    .gray { fill: var(--soft); }
+    .bg { fill: var(--bg); } .card { fill: var(--card); stroke: var(--line); stroke-width: 1; } .soft { fill: var(--soft); stroke: var(--line); stroke-width: 1; }
+    .h { font-size: 17px; font-weight: 700; } .sub { font-size: 13px; fill: var(--muted); }
+    .t { font-size: 14px; } .b { font-weight: 700; } .tm { font-size: 13px; fill: var(--muted); }
+    .bubble { fill: var(--blue-soft); } .count { font-size: 13px; font-weight: 700; fill: var(--blue); }
+    .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; } .ahead { fill: var(--muted); }
+    .lbl { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: .05em; }
+    .bad { fill: var(--bad-soft); } .badt { fill: var(--bad); } .warn { fill: var(--warn-soft); } .warnt { fill: var(--warn); }
+    .good { fill: var(--good-soft); } .goodt { fill: var(--good); } .gray { fill: var(--soft); } .grayt { fill: var(--muted); }
+    .pill { font-size: 11px; font-weight: 700; } .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; fill: var(--muted); }
+    .dash { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; } .faint { opacity: .45; }
+    .big { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
   </style>
-  <rect class="bg" width="1200" height="440" rx="16"/>
-  <rect class="dash" x="20" y="20" width="1160" height="400" rx="20"/>
-  <text class="lbl" x="44" y="50">YOUR MACHINE</text>
-  <rect class="card" x="44" y="68" width="560" height="330" rx="16"/>
-  <text class="h" x="68" y="100">Session transcripts</text>
-  <text class="sub" x="68" y="120">~/.claude/projects · ~/.codex/sessions</text>
-  <g class="faint"><rect class="gray" x="68" y="140" width="80" height="20" rx="6"/><text class="tm pill" x="108" y="154" text-anchor="middle">tool result</text><text class="t" x="164" y="155">{"exit_code":0,"stdout":"build ok…"}</text></g>
-  <g><rect class="bubble" x="68" y="171" width="80" height="20" rx="6"/><text class="count pill" x="108" y="185" text-anchor="middle">you</text><text class="t" x="164" y="186">The header still jumps after I sign in.</text></g>
-  <g class="faint"><rect class="gray" x="68" y="202" width="80" height="20" rx="6"/><text class="tm pill" x="108" y="216" text-anchor="middle">system</text><text class="t" x="164" y="217">&lt;system-reminder&gt; …</text></g>
-  <g class="faint"><rect class="gray" x="68" y="233" width="80" height="20" rx="6"/><text class="tm pill" x="108" y="247" text-anchor="middle">task</text><text class="t" x="164" y="248">&lt;task-notification&gt; background job done</text></g>
-  <g><rect class="bubble" x="68" y="264" width="80" height="20" rx="6"/><text class="count pill" x="108" y="278" text-anchor="middle">you</text><text class="t" x="164" y="279">You fixed the drawer, but not the sheet.</text></g>
-  <g class="faint"><rect class="gray" x="68" y="295" width="80" height="20" rx="6"/><text class="tm pill" x="108" y="309" text-anchor="middle">subagent</text><text class="t" x="164" y="310">Report from the review agent: …</text></g>
-  <g class="faint"><rect class="gray" x="68" y="326" width="80" height="20" rx="6"/><text class="tm pill" x="108" y="340" text-anchor="middle">ack</text><text class="t" x="164" y="341">ok</text></g>
-  <g><rect class="bubble" x="68" y="357" width="80" height="20" rx="6"/><text class="count pill" x="108" y="371" text-anchor="middle">you</text><text class="t" x="164" y="372">Show me the screen before we decide.</text></g>
-  <text class="lbl" x="660" y="222" text-anchor="middle">EXTRACT</text>
-  <path class="arrow" d="M620 234 H692"/><path class="ahead" d="M692 228 L702 234 L692 240 Z"/>
-  <rect class="card" x="716" y="68" width="440" height="330" rx="16"/>
-  <text class="h" x="740" y="100">Only your words</text>
-  <text class="sub" x="740" y="120">messages.md, ready to read</text>
-  <rect class="bubble" x="740" y="146" width="392" height="44" rx="12"/><text class="t" x="756" y="173">The header still jumps after I sign in.</text>
-  <rect class="bubble" x="740" y="202" width="392" height="44" rx="12"/><text class="t" x="756" y="229">You fixed the drawer, but not the sheet.</text>
-  <rect class="bubble" x="740" y="258" width="392" height="44" rx="12"/><text class="t" x="756" y="285">Show me the screen before we decide.</text>
-  <text class="tm" x="740" y="340">Tool output, reminders, notifications, other</text>
-  <text class="tm" x="740" y="358">sessions and one-word acks are dropped.</text>
-  <text class="tm" x="740" y="376">Gigabytes of history take seconds.</text>
+  <rect class="bg" width="480" height="788" rx="16"/>
+  <rect class="dash" x="8" y="8" width="464" height="772" rx="20"/>
+  <text class="lbl" x="24" y="36">YOUR MACHINE</text>
+  <rect class="card" x="20" y="48" width="440" height="350" rx="16"/>
+  <text class="h" x="40" y="80">Session transcripts</text>
+  <text class="sub" x="40" y="100">~/.claude/projects · ~/.codex/sessions</text>
+  <g class="faint"><rect class="gray" x="40" y="120" width="80" height="20" rx="6"/><text class="pill grayt" x="80" y="134" text-anchor="middle">tool result</text><text class="t" x="132" y="135">{"exit_code":0,"stdout":"build ok…"}</text></g>
+  <g><rect class="bubble" x="40" y="154" width="80" height="20" rx="6"/><text class="pill count" x="80" y="168" text-anchor="middle">you</text><text class="t" x="132" y="169">The header still jumps after sign-in.</text></g>
+  <g class="faint"><rect class="gray" x="40" y="188" width="80" height="20" rx="6"/><text class="pill grayt" x="80" y="202" text-anchor="middle">system</text><text class="t" x="132" y="203">&lt;system-reminder&gt; …</text></g>
+  <g class="faint"><rect class="gray" x="40" y="222" width="80" height="20" rx="6"/><text class="pill grayt" x="80" y="236" text-anchor="middle">task</text><text class="t" x="132" y="237">&lt;task-notification&gt; job done</text></g>
+  <g><rect class="bubble" x="40" y="256" width="80" height="20" rx="6"/><text class="pill count" x="80" y="270" text-anchor="middle">you</text><text class="t" x="132" y="271">You fixed the drawer, not the sheet.</text></g>
+  <g class="faint"><rect class="gray" x="40" y="290" width="80" height="20" rx="6"/><text class="pill grayt" x="80" y="304" text-anchor="middle">subagent</text><text class="t" x="132" y="305">Report from the review agent: …</text></g>
+  <g class="faint"><rect class="gray" x="40" y="324" width="80" height="20" rx="6"/><text class="pill grayt" x="80" y="338" text-anchor="middle">ack</text><text class="t" x="132" y="339">ok</text></g>
+  <g><rect class="bubble" x="40" y="358" width="80" height="20" rx="6"/><text class="pill count" x="80" y="372" text-anchor="middle">you</text><text class="t" x="132" y="373">Show me the screen before we decide.</text></g>
+  <path class="arrow" d="M240.0 408 V440"/><path class="ahead" d="M234.0 438 L240.0 448 L246.0 438 Z"/>
+  <text class="lbl" x="254.0" y="432">EXTRACT</text>
+  <rect class="card" x="20" y="458" width="440" height="304" rx="16"/>
+  <text class="h" x="40" y="490">Only your words</text>
+  <text class="sub" x="40" y="510">messages.md, ready to read</text>
+  <rect class="bubble" x="40" y="530" width="400" height="44" rx="13"/><text class="t" x="56" y="557">The header still jumps after sign-in.</text>
+  <rect class="bubble" x="40" y="584" width="400" height="44" rx="13"/><text class="t" x="56" y="611">You fixed the drawer, not the sheet.</text>
+  <rect class="bubble" x="40" y="638" width="400" height="44" rx="13"/><text class="t" x="56" y="665">Show me the screen before we decide.</text>
+  <text class="tm" x="40" y="712">Tool output, reminders, other sessions and</text><text class="tm" x="40" y="730">one-word acks are dropped. Gigabytes take seconds.</text>
 </svg>
