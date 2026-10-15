@@ -1,18 +1,14 @@
 # style-mirror
 
-**Turn yourself into a function your agent can call.**
+**Teach your agent to judge its work the way you would.**
 
 ```
-you(what the AI did, or is about to do)  →  go / stop, and why
+judge(what the agent did, or is about to do)  →  go / stop, and why
 ```
 
-Every time you look at your agent's work, you run this function in your head. Its inputs are a diff, a screen, a plan. Its output is a call — *ship it*, *stop, that's wrong*, *not yet, first do this* — made from your experience, your instinct, and your こだわり: the small things you refuse to let slide.
+When you review an agent's work, you're running a judgment you never wrote down. It comes from experience, from instinct, and from the details you care about more than anyone else on the project. You've been exercising it for months, and every correction you typed left a trace in your local transcripts: *"it jumps when it loads"*, *"you fixed it here but not there"*, *"this copy is wrong for paying users"*.
 
-You've been calling that function for months, and every call left a trace: *"it jumps when it loads"*, *"you fixed it here but not there"*, *"this copy is wrong for paying users"*. Those are in your local transcripts.
-
-`style-mirror` is an [Agent Skill](https://agentskills.io) that learns the function from them — as a set of **lenses** (your criteria, in your own words), how you decide, and what you left open — and then runs it on the current project before you do. Out comes a ranked list: **what you would stop** (fix it before you have to say it) and **where you would push next**.
-
-[日本語は下にあります ↓](#日本語)
+`style-mirror` is an [Agent Skill](https://agentskills.io) that learns that judgment from those traces: your recurring criteria (**lenses**, each backed by your own quotes), how you make decisions, and the threads you left open. Then it applies it to the current project before you look, and hands you a ranked list of **what you would stop** and **what you would push next**.
 
 ## Install
 
@@ -102,51 +98,3 @@ skills/style-mirror/
 
 MIT
 
----
-
-## 日本語
-
-**あなたを、AI が呼べる「関数」にする skill。**
-
-```
-あなた(AI がやったこと・やろうとしていること)  →  進める / 止める と、その理由
-```
-
-AI の仕事を見るたびに、頭の中でこの関数が動いています。入力は差分・画面・計画。出力は「これでいい」「止めて、ちがう」「まだ。先にこれ」という判断。その判断のもとは、これまでの経験と、直感と、こだわりです。
-
-その関数はもう何百回も呼ばれていて、呼ばれた跡が手元の会話ログに残っています。「読み込みでガタつく」「ここは直ったけどあっちが古いまま」「課金した人にこの文言はおかしい」。
-
-`style-mirror` は、その跡から関数を学びます。あなたの物差し（観点を本人の言葉の引用つきで）、決め方のくせ、やりかけのこと。それを今のプロジェクトにあなたより先に当てて、重さ順に出します。**あなたなら止めるところ**（言われる前に直すこと）と、**あなたなら次に進めるところ**（次にやること）です。
-
-### 入れ方
-
-```bash
-npx skills add mkitsugi/style-mirror
-```
-
-入れるエージェント（Claude Code・Codex・Cursor など）と、プロジェクトだけか全体か（`-g`）を聞かれます。Claude Code のプラグインとして入れる場合は:
-
-```text
-/plugin marketplace add mkitsugi/style-mirror
-/plugin install style-mirror@style-mirror
-```
-
-プラグインで入れたときのコマンドは `/style-mirror:style-mirror` です。どちらか一方だけにしてください。Python 3 が要ります（標準ライブラリだけ）。
-
-### 使い方
-
-プロジェクトのフォルダで `/style-mirror`。または「僕が言いそうなことを先に洗い出して」「リリース前に僕の目線で見直して」「やり残していることある？」と頼むだけでも動きます。
-
-- `/style-mirror learn` … 観点づくりだけ
-- `/style-mirror review` … いまある観点で見直しだけ
-
-### 流れ
-
-1. **抜き出す** — `~/.claude/projects` の会話ログから、あなたが打った文だけを取り出します（ツールの結果・システムの文・ほかのセッションからの連絡・「OK」だけの返事は除く）。
-2. **観点にする** — `lenses.md` に、観点（引用つき）・決め方のくせ・何度も言っている決まり・不満のサイン・やりかけのことをまとめます。
-3. **見直す** — ルールの文書・画面・最近のコミット・TODO・スクショを洗い、サブエージェントで手分けして見て、**ひとつずつファイルや画面で裏を取って**から残します。
-4. **まとめる** — `review-YYYY-MM-DD.md` に重さ順の 2 つのリストを書き、チャットでは要点だけ伝えます。
-
-### プライバシー
-
-すべて手元に残ります。会話の抜き出し・観点・レポートはリポジトリの外（`~/.claude/style-mirror/`）に書き、コミットや外部への共有はしません。

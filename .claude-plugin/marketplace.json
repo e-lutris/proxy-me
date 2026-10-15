@@ -6,7 +6,7 @@
     {
       "name": "style-mirror",
       "source": "./",
-      "description": "Learn your go/stop judgment (experience, instinct, こだわり) from local Claude Code / Codex transcripts and run it on the current project."
+      "description": "Learn your go/stop judgment (experience, instinct, standards) from local Claude Code / Codex transcripts and run it on the current project."
     }
   ]
 }
