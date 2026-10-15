@@ -25,7 +25,7 @@ Or as a Claude Code plugin:
 /plugin install style-mirror@style-mirror
 ```
 
-Use one method, not both, or you'll have two copies of the same skill.
+Installed as a plugin, the command is `/style-mirror:style-mirror`. Use one method, not both, or you'll have two copies of the same skill.
 
 Requires Python 3 (standard library only) to read the transcripts.
 
@@ -115,7 +115,7 @@ npx skills add mkitsugi/style-mirror
 /plugin install style-mirror@style-mirror
 ```
 
-どちらか一方だけにしてください。Python 3 が要ります（標準ライブラリだけ）。
+プラグインで入れたときのコマンドは `/style-mirror:style-mirror` です。どちらか一方だけにしてください。Python 3 が要ります（標準ライブラリだけ）。
 
 ### 使い方
 

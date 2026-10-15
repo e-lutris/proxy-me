@@ -29,6 +29,7 @@ Phase 2  review  lenses.md + code + screens + open threads ──subagents──
 1. **Extract.** The script is in `scripts/` next to this file (`${CLAUDE_SKILL_DIR}/scripts/extract.py` in Claude Code). Python 3, standard library only.
 
    ```bash
+   # outside Claude Code, use this skill's folder instead of ${CLAUDE_SKILL_DIR}
    python3 "${CLAUDE_SKILL_DIR}/scripts/extract.py"                 # this project + its worktrees
    python3 "${CLAUDE_SKILL_DIR}/scripts/extract.py" --all --since 180d   # habits across all projects
    python3 "${CLAUDE_SKILL_DIR}/scripts/extract.py" --source both   # also Codex CLI history
